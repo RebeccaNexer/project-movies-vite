@@ -5,7 +5,7 @@ export const Movie = () => {
     const [movie, setMovie] = useState(null);
   
     useEffect(() => {
-     const api = 'e9b2f1cd6a41e02af5f987fd4188549b';
+     const api = import.meta.env.VITE_OPENDB_KEY;
 
       const fetchMovie = async () => {
         try {

@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 export const Movies = () => {
   const [movies, setMovies] = useState([]);
-  const api = 'e9b2f1cd6a41e02af5f987fd4188549b';
 
   useEffect(() => {
+    const api = import.meta.env.VITE_OPENDB_KEY;
+
     const fetchMovies = async () => {
       try {
         const response = await fetch(
